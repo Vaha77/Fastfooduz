@@ -4,9 +4,10 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 300px;
+  min-width: 300px;
   height: 100vh;
-  border: 1px solid red;
   padding: 30px 0;
+  background: white;
 `;
 
 export const Header = styled.div`
@@ -14,7 +15,7 @@ export const Header = styled.div`
   padding: 0 24px;
   align-items: center;
   height: 100px;
-  margin-bottom: 64px;
+  margin-bottom: 54px;
 `;
 Header.Logo = styled.img`
   width: 70px;
@@ -28,6 +29,7 @@ export const Wrepper = styled.div`
   flex-direction: column;
   padding-right: 24px;
   border-left: ${({ left }) => left && "4px solid #fcb600"};
+  height: ${({ left }) => left && "100%"};
 `;
 Wrepper.Title = styled.div`
   font-family: SFProDisplay;
@@ -36,7 +38,6 @@ Wrepper.Title = styled.div`
   color: #2d3a45;
 `;
 Wrepper.Desc = styled.div`
-  font-family: SFProDisplay;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
@@ -54,7 +55,7 @@ export const Link = styled(NavLink)`
   color: #2d3a45;
   width: 100%;
   padding: 10px 40px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
   margin-right: 24px;
